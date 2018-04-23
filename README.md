@@ -1,4 +1,4 @@
-A API do Organizze
+A API do Controlle
 ======
 
 - [Introdução](#introdução)
@@ -6,14 +6,14 @@ A API do Organizze
 - [Apenas JSON](#apenas-json)
 - [Paginação](#paginação)
 - [Erros](#erros)
-- [Listar usuários da conta (exclusivo versão Empresarial do Organizze)](#listar-usuários-da-conta-(exclusivo-versão-empresasarial-do-organizze))
+- [Listar usuários da conta](#listar-usuários-da-conta)
 - [Detalhar usuário](#detalhar-usuário)
 - [Listar contas bancárias](#listar-contas-bancárias)
 - [Detalhar conta bancária](#detalhar-conta-bancária)
 - [Criar conta bancária](#criar-conta-bancária)
 - [Atualizar conta bancária](#atualizar-conta-bancária)
 - [Excluir conta bancária](#excluir-conta-bancária)
-- [Listar centros de custo (exclusivo Empresarial)](#listar-centros-de-custo-(exclusivo-empresarial))
+- [Listar centros de custo](#listar-centros-de-custo)
 - [Detalhar conta centro de custo](#detalhar-conta-centro-de-custo)
 - [Cria um centro de custo](#cria-um-centro-de-custo)
 - [Atualizar um centro de custo](#atualizar-um-centro-de-custo)
@@ -46,18 +46,18 @@ A API do Organizze
 
 # Introdução
 
-A API do Organizze possibilita que aplicações se comuniquem com a sua conta no sistema. Este documento explica como o Organizze funciona, quais são os objetos envolvidos e como esta comunicação pode ser feita. Esta é a primeira versão da API, ainda em versão beta, algumas mudanças e melhorias serão implementadas futuramente.
+A API do Controlle possibilita que aplicações se comuniquem com a sua conta no sistema. Este documento explica como o Controlle funciona, quais são os objetos envolvidos e como esta comunicação pode ser feita. Esta é a primeira versão da API, ainda em versão beta, algumas mudanças e melhorias serão implementadas futuramente.
 
 
 # Fazendo uma requisição
 
 A autenticação de todas request é via Http Basic com o Username e Password descritos abaixo:
-- Username: Email da conta do Organizze
-- Password: Token de acesso. Você consegue ele acessando sua conta do Organizze, no path /configuracoes/api-keys.
+- Username: Email da conta do Controlle
+- Password: Token de acesso. Você consegue ele acessando sua conta do Controlle, no path /configuracoes/api-keys.
 
-Todas as requisições são criptografadas, o Organizze não aceita requisições feitas com HTTP simples, apenas HTTPS. A URL base da API é https://api.organizze.com.br/rest/v2
+Todas as requisições são criptografadas, o Controlle não aceita requisições feitas com HTTP simples, apenas HTTPS. A URL base da API é https://api.controlle.com/rest/v2
 
-Todas as requisições à API do Organizze devem ser acompanhadas do header User-Agent, use este header para informar qual a sua aplicação e qual o seu email para contato. Veja alguns exemplos de como você pode se identificar usando o header User-Agent:
+Todas as requisições à API do Controlle devem ser acompanhadas do header User-Agent, use este header para informar qual a sua aplicação e qual o seu email para contato. Veja alguns exemplos de como você pode se identificar usando o header User-Agent:
 
 ```
 User-Agent: Meu Site (falecom@admin.com.br)
@@ -72,7 +72,7 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 # Paginação
 
-Algumas requisições são paginadas, por exemplo, se você listar os contatos da sua conta, a API vai retornar os primeiros 50 contatos, para acessar a próxima página basta enviar ```&page=2``` como parâmetro. Movimentações e faturas de cartão de crédito são paginadas por período. Para informar qual período utilize os parâmetros ```&start_date=2015-09-01&end_date=2015-09-30```. Se você não informar o período o Organizze vai limitar os registros para o período atual: Mês atual para movimentações e Ano atual para faturas de cartão de crédito.
+Algumas requisições são paginadas, por exemplo, se você listar os contatos da sua conta, a API vai retornar os primeiros 50 contatos, para acessar a próxima página basta enviar ```&page=2``` como parâmetro. Movimentações e faturas de cartão de crédito são paginadas por período. Para informar qual período utilize os parâmetros ```&start_date=2015-09-01&end_date=2015-09-30```. Se você não informar o período o Controlle vai limitar os registros para o período atual: Mês atual para movimentações e Ano atual para faturas de cartão de crédito.
 
 # Erros
 
@@ -108,7 +108,7 @@ Uma tentativa de criar ou atualizar um registro inválido. No exemplo abaixo o u
 
 Usuários
 ====
-# Listar usuários da conta (exclusivo versão Empresarial do Organizze)
+# Listar usuários da conta (exclusivo versão Empresarial do Controlle)
 
 ### Request:
 
@@ -290,7 +290,7 @@ Usuários
 }
 ```
 
-# Listar centros de custo (exclusivo Empresarial)
+# Listar centros de custo
 
 ### Request:
 
