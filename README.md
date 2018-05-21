@@ -53,7 +53,7 @@ A API do Controlle possibilita que aplicações se comuniquem com a sua conta no
 
 A autenticação de todas request é via Http Basic com o Username e Password descritos abaixo:
 - Username: Email da conta do Controlle
-- Password: Token de acesso. Você consegue ele acessando sua conta do Controlle, no path /configuracoes/api-keys.
+- Password: Token de acesso. Você consegue ele acessando sua conta do Controlle, na url https://app.controlle.com/configuracoes/api-keys.
 
 Todas as requisições são criptografadas, o Controlle não aceita requisições feitas com HTTP simples, apenas HTTPS. A URL base da API é https://api.controlle.com/rest/v2
 
