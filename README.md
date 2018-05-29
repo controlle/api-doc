@@ -108,7 +108,8 @@ Uma tentativa de criar ou atualizar um registro inválido. No exemplo abaixo o u
 
 Usuários
 ====
-# Listar usuários da conta (exclusivo versão Empresarial do Controlle)
+# Listar usuários da conta 
+(exclusivo versão Empresarial do Controlle)
 
 ### Request:
 
