@@ -6,7 +6,7 @@ A API do Controlle
 - [Apenas JSON](#apenas-json)
 - [Paginação](#paginação)
 - [Erros](#erros)
-- [Listar usuários da conta](#listar-usuarios-da-conta)
+- [Listar usuários da conta](#listar-usuários-da-conta)
 - [Detalhar usuário](#detalhar-usuário)
 - [Listar contas bancárias](#listar-contas-bancárias)
 - [Detalhar conta bancária](#detalhar-conta-bancária)
