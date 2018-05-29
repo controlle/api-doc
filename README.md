@@ -6,7 +6,7 @@ A API do Controlle
 - [Apenas JSON](#apenas-json)
 - [Paginação](#paginação)
 - [Erros](#erros)
-- [Listar usuários da conta](#listar-usuários-da-conta)
+- [Listar usuários da conta](#listar-usuarios-da-conta)
 - [Detalhar usuário](#detalhar-usuário)
 - [Listar contas bancárias](#listar-contas-bancárias)
 - [Detalhar conta bancária](#detalhar-conta-bancária)
@@ -38,9 +38,9 @@ A API do Controlle
 - [Excluir contato](#excluir-contato)
 - [Listar movimentações](#listar-movimentações)
 - [Detalhar uma movimentação](#detalhar-uma-movimentação)
-- [Cria uma movimentação.](#cria-uma-movimentação.)
-- [Cria uma movimentação recorrente (fixa).](#cria-uma-movimentação-recorrente-(fixa).)
-- [Cria uma movimentação recorrente (parcelada).](#cria-uma-movimentação-recorrente-(parcelada).)
+- [Cria uma movimentação](#cria-uma-movimentação)
+- [Cria uma movimentação recorrente - fixa](#cria-uma-movimentação-recorrente-fixa)
+- [Cria uma movimentação recorrente - parcelada](#cria-uma-movimentação-recorrente-parcelada)
 - [Atualizar uma movimentação](#atualizar-uma-movimentação)
 - [Excluir movimentação](#excluir-movimentação)
 
@@ -1259,7 +1259,7 @@ A paginação de movimentações é feita com os parametros start_date e end_dat
 }
 ```
 
-# Cria uma movimentação.
+# Cria uma movimentação
 
 ### Request:
 
@@ -1271,7 +1271,9 @@ A paginação de movimentações é feita com os parametros start_date e end_dat
 {
     "description": "Computador",
     "notes": "Pagamento via boleto",
-    "date": "2015-09-16"
+    "date": "2015-09-16",
+    "cost_center_id": "1",
+    "amount_in_cents": "12578"
 }
 ```
 
@@ -1304,7 +1306,7 @@ A paginação de movimentações é feita com os parametros start_date e end_dat
 ```
 
 
-# Cria uma movimentação recorrente (fixa).
+# Cria uma movimentação recorrente (fixa)
 
 Os valores para `periodicity` são: `["monthly", "yearly", "weekly", "biweekly", "bimonthly", "trimonthly"]`
 
@@ -1354,7 +1356,7 @@ Os valores para `periodicity` são: `["monthly", "yearly", "weekly", "biweekly",
 
 
 
-# Cria uma movimentação recorrente (parcelada).
+# Cria uma movimentação recorrente (parcelada)
 
 Os valores para `periodicity` são: `["monthly", "yearly", "weekly", "biweekly", "bimonthly", "trimonthly"]`
 
