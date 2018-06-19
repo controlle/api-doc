@@ -1274,7 +1274,7 @@ A paginação de movimentações é feita com os parametros start_date e end_dat
     "notes": "Pagamento via boleto",
     "date": "2015-09-16",
     "cost_center_id": "1",
-    "amount_in_cents": "12578"
+    "amount_cents": "12578"
 }
 ```
 
