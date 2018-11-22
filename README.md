@@ -1028,11 +1028,34 @@ Ao excluir uma categoria você pode informar uma categoria para substitui-la, to
 
 ```json
 {
-    "id": 1,
-    "name": "Marketing",
-    "parent_id": null,
-    "created_at": null,
-    "updated_at": null
+    "id": 15,
+    "name": "João da Silva",
+    "email": null,
+    "phone_number": "47 3409-3098",
+    "website": null,
+    "notes": null,
+    "client": true,
+    "supplier": false,
+    "fiscal_entity_type": "legal_person",
+    "fiscal_identification": "11111111111",
+    "fiscal_name": null,
+    "company_fantasy_name": null,
+    "municipal_registration": null,
+    "state_registration": null,
+    "created_at": "2015-09-16T02:11:01-03:00",
+    "updated_at": "2015-09-16T02:11:01-03:00",
+    "address": [
+        {
+          "zipcode": "88803-360",
+          "street": "Rua x",
+          "number": "999",
+          "complement": "Casa",
+          "district": "Bairro x",
+          "city": "Cidade x",
+          "state": "Estado x",
+          "city_ibge_code": "11111"
+        }
+    ]
 }
 ```
 
@@ -1042,12 +1065,28 @@ Ao excluir uma categoria você pode informar uma categoria para substitui-la, to
 
 ```POST /contacts```
 
+## Exemplo pessoa física
+
 #### Body:
 
 ```json
 {
     "name": "João da Silva",
-    "phone_number": "47 3409-3098"
+    "client": true,
+    "supplier": false,
+    "phone_number": "47 3409-3098",
+    "fiscal_entity_type": "legal_person",
+    "fiscal_identification": "11111111111",
+    "address_attributes": {
+        "zipcode": "88803-360",
+        "street": "Rua x",
+        "number": "999",
+        "complement": "Casa",
+        "district": "Bairro x",
+        "city": "Cidade x",
+        "state": "Estado x",
+        "city_ibge_code": "11111"
+    }
 }
 ```
 
@@ -1061,8 +1100,92 @@ Ao excluir uma categoria você pode informar uma categoria para substitui-la, to
     "phone_number": "47 3409-3098",
     "website": null,
     "notes": null,
+    "client": true,
+    "supplier": false,
+    "fiscal_entity_type": "legal_person",
+    "fiscal_identification": "11111111111",
+    "fiscal_name": null,
+    "company_fantasy_name": null,
+    "municipal_registration": null,
+    "state_registration": null,
     "created_at": "2015-09-16T02:11:01-03:00",
-    "updated_at": "2015-09-16T02:11:01-03:00"
+    "updated_at": "2015-09-16T02:11:01-03:00",
+    "address": [
+        {
+          "zipcode": "88803-360",
+          "street": "Rua x",
+          "number": "999",
+          "complement": "Casa",
+          "district": "Bairro x",
+          "city": "Cidade x",
+          "state": "Estado x",
+          "city_ibge_code": "11111"
+        }
+    ]
+}
+```
+
+## Exemplo pessoa jurídica
+
+#### Body:
+
+```json
+{
+    "name": "João da Silva",
+    "phone_number": "47 3409-3098",
+    "client": false,
+    "supplier": true,
+    "fiscal_entity_type": "company",
+    "fiscal_identification": "11111111111111",
+    "fiscal_name": "Empresa x",
+    "company_fantasy_name": "Nome fantasia",
+    "municipal_registration": null,
+    "state_registration": null,
+    "address_attributes": {
+        "zipcode": "88803-360",
+        "street": "Rua x",
+        "number": "999",
+        "complement": "Casa",
+        "district": "Bairro x",
+        "city": "Cidade x",
+        "state": "Estado x",
+        "city_ibge_code": "11111"
+    }
+}
+```
+
+### Response:
+
+```json
+{
+    "id": 15,
+    "name": "João da Silva",
+    "email": null,
+    "phone_number": "47 3409-3098",
+    "website": null,
+    "notes": null,
+    "client": false,
+    "supplier": true,
+    "fiscal_entity_type": "company",
+    "fiscal_identification": "11111111111111",
+    "fiscal_name": null,
+    "company_fantasy_name": "Nome fantasia",
+    "municipal_registration": null,
+    "state_registration": null,
+    "created_at": "2015-09-16T02:11:01-03:00",
+    "updated_at": "2015-09-16T02:11:01-03:00",
+    "address": [
+        {
+          "zipcode": "88803-360",
+          "street": "Rua x",
+          "number": "999",
+          "complement": "Casa",
+          "district": "Bairro x",
+          "city": "Cidade x",
+          "state": "Estado x",
+          "city_ibge_code": "11111"
+        }
+    ]
 }
 ```
 
