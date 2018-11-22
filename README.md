@@ -996,25 +996,65 @@ Ao excluir uma categoria você pode informar uma categoria para substitui-la, to
 ```json
 [
     {
-        "id": 13,
-        "name": "Someone",
-        "email": "foo@bar.com",
-        "phone_number": "47 3409-3099",
-        "website": null,
-        "notes": null,
-        "created_at": "2015-09-02T13:23:40-03:00",
-        "updated_at": "2015-09-02T13:45:18-03:00"
+    "id": 15,
+    "name": "João da Silva",
+    "email": null,
+    "phone_number": "47 3409-3098",
+    "website": null,
+    "notes": null,
+    "client": true,
+    "supplier": false,
+    "fiscal_entity_type": "legal_person",
+    "fiscal_identification": "11111111111",
+    "fiscal_name": null,
+    "company_fantasy_name": null,
+    "municipal_registration": null,
+    "state_registration": null,
+    "created_at": "2015-09-16T02:11:01-03:00",
+    "updated_at": "2015-09-16T02:11:01-03:00",
+    "address": [
+        {
+          "zipcode": "88803-360",
+          "street": "Rua x",
+          "number": "999",
+          "complement": "Casa",
+          "district": "Bairro x",
+          "city": "Cidade x",
+          "state": "Estado x",
+          "city_ibge_code": "11111"
+        }
+    ]
     },
     {
-        "id": 14,
-        "name": "Simiano",
-        "email": null,
-        "phone_number": "47 3409-3098",
-        "website": null,
-        "notes": null,
-        "created_at": "2015-09-02T13:41:29-03:00",
-        "updated_at": "2015-09-02T13:41:29-03:00"
-    }
+    "id": 16,
+    "name": "Maria da Silva",
+    "email": null,
+    "phone_number": "47 3409-3098",
+    "website": null,
+    "notes": null,
+    "client": true,
+    "supplier": false,
+    "fiscal_entity_type": "legal_person",
+    "fiscal_identification": "11111111111",
+    "fiscal_name": null,
+    "company_fantasy_name": null,
+    "municipal_registration": null,
+    "state_registration": null,
+    "created_at": "2015-09-16T02:11:01-03:00",
+    "updated_at": "2015-09-16T02:11:01-03:00",
+    "address": [
+        {
+          "zipcode": "88803-360",
+          "street": "Rua x",
+          "number": "999",
+          "complement": "Casa",
+          "district": "Bairro x",
+          "city": "Cidade x",
+          "state": "Estado x",
+          "city_ibge_code": "11111"
+        }
+    ]
+}
 ]
 ```
 
@@ -1192,7 +1232,7 @@ Ao excluir uma categoria você pode informar uma categoria para substitui-la, to
 # Atualizar um contato
 
 ### Request:
-
+```PUT /contacts/14```
 
 #### Body:
 
@@ -1207,13 +1247,33 @@ Ao excluir uma categoria você pode informar uma categoria para substitui-la, to
 ```json
 {
     "id": 14,
-    "name": "Simiano",
+    "name": "João da Silva",
     "email": null,
     "phone_number": "47 3409-3000",
     "website": null,
     "notes": null,
-    "created_at": "2015-09-02T13:41:29-03:00",
-    "updated_at": "2015-09-16T02:13:35-03:00"
+    "client": false,
+    "supplier": true,
+    "fiscal_entity_type": "company",
+    "fiscal_identification": "11111111111111",
+    "fiscal_name": null,
+    "company_fantasy_name": "Nome fantasia",
+    "municipal_registration": null,
+    "state_registration": null,
+    "created_at": "2015-09-16T02:11:01-03:00",
+    "updated_at": "2015-09-16T02:11:01-03:00",
+    "address": [
+        {
+          "zipcode": "88803-360",
+          "street": "Rua x",
+          "number": "999",
+          "complement": "Casa",
+          "district": "Bairro x",
+          "city": "Cidade x",
+          "state": "Estado x",
+          "city_ibge_code": "11111"
+        }
+    ]
 }
 ```
 
@@ -1228,13 +1288,33 @@ Ao excluir uma categoria você pode informar uma categoria para substitui-la, to
 ```json
 {
     "id": 14,
-    "name": "Simiano",
+    "name": "João da Silva",
     "email": null,
     "phone_number": "47 3409-3000",
     "website": null,
     "notes": null,
-    "created_at": "2015-09-02T13:41:29-03:00",
-    "updated_at": "2015-09-16T02:13:35-03:00"
+    "client": false,
+    "supplier": true,
+    "fiscal_entity_type": "company",
+    "fiscal_identification": "11111111111111",
+    "fiscal_name": null,
+    "company_fantasy_name": "Nome fantasia",
+    "municipal_registration": null,
+    "state_registration": null,
+    "created_at": "2015-09-16T02:11:01-03:00",
+    "updated_at": "2015-09-16T02:11:01-03:00",
+    "address": [
+        {
+          "zipcode": "88803-360",
+          "street": "Rua x",
+          "number": "999",
+          "complement": "Casa",
+          "district": "Bairro x",
+          "city": "Cidade x",
+          "state": "Estado x",
+          "city_ibge_code": "11111"
+        }
+    ]
 }
 ```
 
