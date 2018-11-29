@@ -74,6 +74,8 @@ A API só suporta JSON, nós não vamos dar suporte a outro formato. Mesmo que v
 
 Algumas requisições são paginadas, por exemplo, se você listar os contatos da sua conta, a API vai retornar os primeiros 50 contatos, para acessar a próxima página basta enviar ```&page=2``` como parâmetro. Movimentações e faturas de cartão de crédito são paginadas por período. Para informar qual período utilize os parâmetros ```&start_date=2015-09-01&end_date=2015-09-30```. Se você não informar o período o Controlle vai limitar os registros para o período atual: Mês atual para movimentações e Ano atual para faturas de cartão de crédito.
 
+```Ex: https://api.controlle.com/rest/v2/transactions?start_date=2015-09-01&end_date=2015-09-30&contact_id=1```
+
 # Erros
 
 Abaixo estão listados alguns exemplos de erros que podem acontecer e as suas respectivas respostas:
