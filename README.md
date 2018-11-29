@@ -1326,6 +1326,8 @@ A paginação de movimentações é feita com os parametros start_date e end_dat
 
 ```GET /transactions```
 
+####Parametros disponíveis: ```start_date, end_date, contact_id, cost_center_id, page ```
+
 ### Response:
 
 ```json
